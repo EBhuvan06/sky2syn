@@ -1,8 +1,7 @@
 # sky2syn
 Skywater to Synopsys
-
-<details> 
-  <summary> Week_0
+<summary> Week_0
+  <details> 
   
 ## Document
 
