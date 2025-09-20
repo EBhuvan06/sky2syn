@@ -7,8 +7,10 @@ Skywater to Synopsys
 We are going to understand the given below process 
 
 soft copy of the Hardware using RTL
+          
           ---> 1.Processor
                ---> 1.Gate Level Netlist
+          
           ---> 2.Peripherals/IPs
                ---> 1.Macros
                ---> 2.Analog IPs 
