@@ -4,15 +4,15 @@ Skywater to Synopsys
 <summary>Week_0</summary>
     
 ## Document
-We are going to understand the given below process /
+We are going to understand the given below process 
 
 soft copy of the Hardware using RTL /
               | /
-              |  /
-   ___________|_________________  /
-   |                           |  /
-   |                           |  /
- Processor               Peripherals/IPs  /
+              | /
+   ___________|_________________ /
+   |                           | /
+   |                           | /
+ Processor               Peripherals/IPs /
    |                           | /
    |                           | /
  Gate Level              ______|_____ /
