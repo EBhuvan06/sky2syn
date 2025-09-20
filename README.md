@@ -1,8 +1,7 @@
 # sky2syn
 Skywater to Synopsys
-<summary> Week_0
-  <details/Week_0>
-
+  <details>
+<summary>Week_0</summary>
 ## Document
 
 soft copy of the Hardware using RTL
