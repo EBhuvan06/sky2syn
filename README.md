@@ -30,18 +30,7 @@ $ sudo make install
 
 $ sudo apt-get install iverilog
 
-bhuvan@HP-Pavilion-Plus-Laptop-14-ew0xxx:~$ iverilog
-iverilog: no source files.
 
-Usage: iverilog [-EiSuvV] [-B base] [-c cmdfile|-f cmdfile]
-                [-g1995|-g2001|-g2005|-g2005-sv|-g2009|-g2012] [-g<feature>]
-                [-D macro[=defn]] [-I includedir] [-L moduledir]
-                [-M [mode=]depfile] [-m module]
-                [-N file] [-o filename] [-p flag=value]
-                [-s topmodule] [-t target] [-T min|typ|max]
-                [-W class] [-y dir] [-Y suf] [-l file] source_file(s)
-
-See the man page for details.
 
 ![Iverilog Installed](Week_0/iverilog.png)
 
@@ -50,15 +39,7 @@ See the man page for details.
 $ sudo apt update
 $ sudo apt install gtkwave
 
-
-bhuvan@HP-Pavilion-Plus-Laptop-14-ew0xxx:~$ gtkwave
-Gtk-Message: 21:42:49.369: Failed to load module "canberra-gtk-module"
-
-GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
-
-GTKWAVE | Use the -h, --help command line flags to display help.
-
-![GTKWave Installed](Week_0/gtkwave.png)
+[GTKWave Installed](Week_0/gtkwave.png)
 
 
 
