@@ -2,6 +2,24 @@
 Skywater to Synopsys
   <details>
 <summary>Week_0</summary>
+## Document
+We are going to understand the given below process /
+
+soft copy of the Hardware using RTL /
+              | /
+              |  /
+   ___________|_________________  /
+   |                           |  /
+   |                           |  /
+ Processor               Peripherals/IPs  /
+   |                           | /
+   |                           | /
+ Gate Level              ______|_____ /
+  Netlist                |          | /
+                      Macros       Analog IPs /
+
+
+USing the small part(blue block) which has basic gates, transistors, IPs etc. This create GDSII sent to factory which is Tape-in we get the chips out which is called Tape-out by this we are going to get the chip for that we are going to provide the peripherals for the chip which is taped-out once we get the chip we can interface with different equipments which can work under 100Mhz to 130Mhz like Arduino boards, TV pannels, AC applications etc..
 
 ## Yosys
 
