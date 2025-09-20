@@ -99,6 +99,14 @@ See the man page for details.
 ```
 $ sudo apt update 
 $ sudo apt install gtkwave
+
+
+bhuvan@HP-Pavilion-Plus-Laptop-14-ew0xxx:~$ gtkwave
+Gtk-Message: 21:42:49.369: Failed to load module "canberra-gtk-module"
+
+GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+
+GTKWAVE | Use the -h, --help command line flags to display help.
 ```
 
 ![GTKWave Installed](Week_0/gtkwave.png)
