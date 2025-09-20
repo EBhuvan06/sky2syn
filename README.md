@@ -19,6 +19,7 @@ soft copy of the Hardware using RTL
 Using the small part(blue block) which has basic gates, transistors, IPs etc. This create GDSII sent to factory which is Tape-in we get the chips out which is called Tape-out by this we are going to get the chip for that we are going to provide the peripherals for the chip which is taped-out once we get the chip we can interface with different equipments which can work under 100Mhz to 130Mhz like Arduino boards, TV pannels, AC applications etc..
 
 ## Yosys
+,,,
 
 $ git clone https://github.com/YosysHQ/yosys.git
 $ cd yosys 
@@ -30,7 +31,7 @@ $ sudo apt-get install build-essential clang bison flex \
 $ make 
 $ sudo make install
 
- 
+ ,,,
 
 ![Yosys Installed](Week_0/yosys.png)
 
