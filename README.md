@@ -29,7 +29,7 @@ $ sudo apt-get install iverilog
 ##GTKWave
 
 $ sudo apt update \
-$ sudo apt install gtkwave \
+$ sudo apt install gtkwave 
 
 [GTKWave Installed](Week_0/gtkwave.png)
 
