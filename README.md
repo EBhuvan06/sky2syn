@@ -34,19 +34,20 @@ $ sudo make install
 ![Yosys Installed](Week_0/yosys.png)
 
 ## Iverilog
-
+```
 $ sudo apt-get install iverilog
-
+```
 
 
 ![Iverilog Installed](Week_0/iverilog.png)
 
 ## GTKWave
+```
+$ sudo apt update 
+$ sudo apt install gtkwave
+```
 
-$ sudo apt update \
-$ sudo apt install gtkwave 
-
-[GTKWave Installed](Week_0/gtkwave.png)
+![GTKWave Installed](Week_0/gtkwave.png)
 
 
 
