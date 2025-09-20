@@ -28,7 +28,7 @@ $ sudo apt-get install build-essential clang bison flex \
     graphviz xdot pkg-config python3 libboost-system-dev \ 
     libboost-python-dev libboost-filesystem-dev zlib1g-dev \
 $ make \
-$ sudo make install \
+$ sudo make install 
  
 
 ![Yosys Installed](Week_0/yosys.png)
