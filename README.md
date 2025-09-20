@@ -4,7 +4,7 @@ Skywater to Synopsys
 <summary>Week_0</summary>
 ## Document
                                     -----> Processor -----------> Gate Level Netliat
-soft copy of the Hardware using RTL                       ------> Macros     
+soft copy of the Hardware using RTL                       ------> Macros    
                                     ----->Peripherals/IPs 
                                                           -------> Analog IP
 
