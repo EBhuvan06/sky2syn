@@ -1,4 +1,4 @@
 # sky2syn
 Skywater to Synopsys
 
-* Week_0
+<details><summary> Week_0
