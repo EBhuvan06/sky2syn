@@ -116,6 +116,7 @@ GTKWAVE | Use the -h, --help command line flags to display help.
 <summary>Week_1</summary>
   <details>
 <summary>Day_1</summary>
+    
 ## Intro to Iverilog
 ## Simulation
   ```
@@ -157,7 +158,8 @@ Design may have 1 or more primary inputs & outputs
 2 iverilog simulator only checks changes in input if there are changes in input we gona dump the chnages in output.
 3 .vdc file(Value_Change_Dump format) is a output file which is used to check the changes in the output.
 4 gtkwave is used to map the output changes in form of a wave.
-
+```
+  </details>
 
 
 
