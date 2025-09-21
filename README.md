@@ -116,13 +116,14 @@ GTKWAVE | Use the -h, --help command line flags to display help.
 <summary>Week_1</summary>
   <details>
 <summary>Day_1</summary>
-# Intro to Iverilog
+## Intro to Iverilog
 ## Simulation
   ```
 Checking of design is done by simulation.
 We are going to use iverilog simulator to simulate the design.
 ```
 ## Design
+    
 Design is the actual verilog code or set of verilog codes which has the intended functionality to meet with the required specification.
 
 ## Test Bench
