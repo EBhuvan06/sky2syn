@@ -111,8 +111,7 @@ GTKWAVE | Use the -h, --help command line flags to display help.
 
 ![GTKWave Installed](Week_0/gtkwave.png)
   </details>
-  
-  <details>
+   <details>
 <summary>Week_1</summary>
   <details>
 <summary>Day_1</summary>
@@ -161,8 +160,6 @@ Design may have 1 or more primary inputs & outputs
 4 gtkwave is used to map the output changes in form of a wave.
 ```
   </details>
-
-
   <details>
 <summary>How to use Iverilog and GTKWave</summary>
 
