@@ -116,8 +116,8 @@ GTKWAVE | Use the -h, --help command line flags to display help.
 <summary>Week_1</summary>
   <details>
 <summary>Day_1</summary>
-    
-## Intro to Iverilog
+  <details>
+<summary>Intro to Iverilog</summary> 
 ## Simulation
   ```
 Checking of design is done by simulation.
