@@ -110,6 +110,15 @@ GTKWAVE | Use the -h, --help command line flags to display help.
 ```
 
 ![GTKWave Installed](Week_0/gtkwave.png)
+  </details>
+  
+  <details>
+<summary>Week_1</summary>
+  <details>
+<summary>Day_1</summary>
+## Intro to Iverilog
+
+
 
 
 
