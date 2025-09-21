@@ -163,6 +163,113 @@ Design may have 1 or more primary inputs & outputs
   </details>
 
 
+  <details>
+<summary>How to use Iverilog and GTKWave</summary>
+
+  ## Getting all files related to Iverilog
+  First open terminal and clone git
+  ```
+$ sudo -i
+# go to the directory where you want to paste the librays and verilog codes using git
+~# git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
+```
+We got all verilog files and librarys required to perform iverilog simulation
+
+## Knowing how gtkwave and iverilog works
+After cloning the git go to sky130RTLDesignAndSynthesisWorkshop -----> verilog_files directory
+```
+$sudo -i
+#change the directory where sky130RTLDesignAndSynthesisWorkshop file exists
+~# cd sky130RTLDesignAndSynthesisWorkshop/ verilog_files/
+# in verilog_files we have all design related files and test benches for the respective design file
+# now invoking the iverilog
+~# iverilog design_file.v tb_design_file.v
+# in this we are providing design and testbench of respective design file for simulation
+~# ./a.out # for geting .vcd file for checking output
+~# gtkwave tb_design_file.vcd # this gives the output wave form
+
+```
+```
+bhuvan@HP-Pavilion-Plus-Laptop-14-ew0xxx:~$ sudo -i
+[sudo] password for bhuvan: 
+root@HP-Pavilion-Plus-Laptop-14-ew0xxx:~# cd /home/bhuvan/
+root@HP-Pavilion-Plus-Laptop-14-ew0xxx:/home/bhuvan# ls
+Bhuvan     Downloads  Public                               sky2syn    Videos
+Desktop    Music      README.md                            snap       yosys
+Documents  Pictures   sky130RTLDesignAndSynthesisWorkshop  Templates
+root@HP-Pavilion-Plus-Laptop-14-ew0xxx:/home/bhuvan# cd sky130RTLDesignAndSynthesisWorkshop/verilog_files/
+root@HP-Pavilion-Plus-Laptop-14-ew0xxx:/home/bhuvan/sky130RTLDesignAndSynthesisWorkshop/verilog_files# ls
+a.out                    partial_case_assign.v
+bad_case_net.v           pattern_detect_fsm_bad_style.v
+bad_case.v               pattern_detect_fsm.v
+bad_counter.v            rca.v
+bad_latch_2.v            ripple_counter.v
+bad_latch_net.v          tb_bad_case.v
+bad_latch.v              tb_bad_counter.v
+bad_mux_net.v            tb_bad_latch2.v
+bad_mux.v                tb_bad_latch.v
+bad_shift_reg2.v         tb_bad_mux.v
+bad_shift_reg.v          tb_bad_shift_reg2.v
+blocking_caveat_net.v    tb_bad_shift_reg.v
+blocking_caveat.v        tb_blocking_caveat.v
+comp_case.v              tb_comp_case.v
+counter_opt2.v           tb_counter_opt.v
+counter_opt.v            tb_demux_case.v
+demux_case.v             tb_demux_generate.v
+demux_generate.v         tb_dff_asyncres_syncres.v
+dff_ares.net.v           tb_dff_asyncres.v
+dff_asyncres_net.v       tb_dff_async_set.v
+dff_asyncres_syncres.v   tb_dff_const1.v
+dff_asyncres.v           tb_dff_const2.v
+dff_async_set.v          tb_dff_const3.v
+dff_const1.v             tb_dff_const4.v
+dff_const2.v             tb_dff_const5.v
+dff_const3.v             tb_dff_syncres.v
+dff_const4.v             tb_good_counter.v
+dff_const5.v             tb_good_latch.v
+dff_net.v                tb_good_mux.v
+dff_syncres.v            tb_good_mux.vcd
+fa.v                     tb_good_shift_reg.v
+good_counter.v           tb_incomp_case.v
+good_latch.v             tb_incomp_if2.v
+good_mux_netlist.v       tb_incomp_if.v
+good_mux.v               tb_multiple_modules.v
+good_shift_reg.v         tb_mux_generate.v
+incomp_case.v            tb_opt_check2.v
+incomp_if2.v             tb_opt_check3.v
+incomp_if.v              tb_opt_check.v
+mul2_net.v               tb_partial_case_assign.v
+mult_2.v                 tb_pattern_detect_fsm.v
+mult_8.v                 tb_rca.v
+multiple_module_opt2.v   tb_ripple_counter.v
+multiple_module_opt.v    tb_ternary_operator_mux.v
+multiple_modules_flat.v  tb_upcntr.v
+multiple_modules_hier.v  tb_up_dn_cntr.v
+multiple_modules.v       tb_up_dn_cntr_with_load.v
+mux_generate.v           tb_up_dn_cntr_with_load_with_start_stop.v
+mux_spice.v              ternary_operator_mux_net.v
+net.v                    ternary_operator_mux.v
+opt_check2.v             upcntr.v
+opt_check3.v             up_dn_cntr.v
+opt_check4.v             up_dn_cntr_with_load.v
+opt_check.v              up_dn_cntr_with_load_with_start_stop.v
+root@HP-Pavilion-Plus-Laptop-14-ew0xxx:/home/bhuvan/sky130RTLDesignAndSynthesisWorkshop/verilog_files# iverilog good_mux.v tb_good_mux.v 
+root@HP-Pavilion-Plus-Laptop-14-ew0xxx:/home/bhuvan/sky130RTLDesignAndSynthesisWorkshop/verilog_files# ./a.out 
+VCD info: dumpfile tb_good_mux.vcd opened for output.
+root@HP-Pavilion-Plus-Laptop-14-ew0xxx:/home/bhuvan/sky130RTLDesignAndSynthesisWorkshop/verilog_files# gtkwave tb_good_mux.vcd 
+Gtk-Message: 23:59:17.901: Failed to load module "canberra-gtk-module"
+
+GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+
+
+(gtkwave:10340): dconf-WARNING **: 23:59:17.916: failed to commit changes to dconf: Failed to execute child process ?dbus-launch? (No such file or directory)
+[0] start time.
+[300000] end time.
+
+(gtkwave:10340): dconf-WARNING **: 23:59:18.099: failed to commit changes to dconf: Failed to execute child process ?dbus-launch? (No such file or directory)
+
+(gtkwave:10340): dconf-WARNING **: 23:59:18.099: failed to commit changes to dconf: Failed to execute child process ?dbus-launch? (No such file or directory)
+```
 
 
 
