@@ -269,5 +269,9 @@ GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
 (gtkwave:10340): dconf-WARNING **: 23:59:18.099: failed to commit changes to dconf: Failed to execute child process ?dbus-launch? (No such file or directory)
 ```
 
+![Expected 1](Week_1/Expected_output_1.png)
+
+![Expected 2](Week_1/Expexted _output_2.png)
+
 
 
