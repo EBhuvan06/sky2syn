@@ -133,9 +133,9 @@ TB(Test Bench) is used to check whether it obey required specifications or not.
 We have to apply stimulus(test_verilog) to the design and have to observe output and check whether it matches with specifications or not.
 ```
 ## How Simulation Works
-```
+
 First simulator checks for the changes on the input. Upon change to the input the output is evaluated. If no change to input no change in output.
- 
+``` 
  ----------            --------            ----------
 |          | Primary  |        |  Primary |          |
 |Stimulus  |--------->| Design |--------->|Stimulus  |
