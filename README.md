@@ -189,6 +189,7 @@ $sudo -i
 ~# gtkwave tb_design_file.vcd # this gives the output wave form
 
 ```
+## Terminal Overview
 ```
 bhuvan@HP-Pavilion-Plus-Laptop-14-ew0xxx:~$ sudo -i
 [sudo] password for bhuvan: 
