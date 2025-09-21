@@ -1,6 +1,6 @@
 # sky2syn
 Skywater to Synopsys
-  <details>
+<details>
 <summary>Week_0</summary>
     
 ## Document
@@ -110,13 +110,12 @@ GTKWAVE | Use the -h, --help command line flags to display help.
 ```
 
 ![GTKWave Installed](Week_0/gtkwave.png)
-  </details>
-  
-  <details>
+</details>
+<details>
 <summary>Week_1</summary>
-  <details>
+<details>
 <summary>Day_1</summary>
-  <details>
+<details>
 <summary>Intro to Iverilog</summary> 
     
 ## Simulation
@@ -161,8 +160,6 @@ Design may have 1 or more primary inputs & outputs
 4 gtkwave is used to map the output changes in form of a wave.
 ```
   </details>
-
-
   <details>
 <summary>How to use Iverilog and GTKWave</summary>
 
@@ -273,5 +270,7 @@ GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
 ```
 
 
+![Expected_Output1](Week_1/Expected output 1.png)
+![Expected_Output2](Week_1/Expexted Output 2.png)
 
 
