@@ -292,4 +292,48 @@ This gives the verilog design code and testbench code
 
 </details>
 
+<details>
+<summary>How to yosys</summary>
+
+## yosys
+Now we are going to use yosys which is the synthesizer used to convert RTL to netlist
+
+## yosys setup
+
+     ------------
+    |Read_verilog|
+     ------------   
+       /                                 -------------
+     /                                  |Write_verilog|
+ --------                                -------------
+|        |                                /
+| Design |------                        /  
+|        |      |      -------        -------
+ --------       |     |       |      |       |
+                |---->| Yosys |----->|netlist|
+ --------       |     |       |      |  file |
+|        |      |      -------        -------
+|  .lib  |------
+|        |
+ --------
+   \  
+     \
+  ------------
+ |Read_verilog|
+  ------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
