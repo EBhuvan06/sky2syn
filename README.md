@@ -272,7 +272,24 @@ GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
 ![Expected 1](Week_1/Expected_output_1.png)
 
 
-![Expected 2](Week_1/Expected _output_2.png)
+![Expected](Week_1/Expected%20_output_2.png)
 
+</details>
+
+<details>
+<summary>Checking the Desing and Test Bench</summary>
+
+## Checking the code
+To check the design code and testbench code first open terminal and go to the directory where the related files are present and run the below commands
+```
+$ sudo -i
+~# cd /home/bhuvan/sky130RTLDesignAndSynthesisWorkshop/verilog_files/
+~# gvim -O good_mux.v tb_good_mux.v
+```
+This gives the verilog design code and testbench code
+
+![code](Week_1/Codes.png)
+
+</details>
 
 
