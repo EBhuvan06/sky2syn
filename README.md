@@ -299,7 +299,7 @@ This gives the verilog design code and testbench code
 Now we are going to use yosys which is the synthesizer used to convert RTL to netlist
 
 ## yosys setup
-
+```
      ------------
     |Read_verilog|
      ------------   
@@ -321,7 +321,7 @@ Now we are going to use yosys which is the synthesizer used to convert RTL to ne
   ------------
  |Read_verilog|
   ------------
-
+```
 
 
 
