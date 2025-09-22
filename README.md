@@ -306,8 +306,8 @@ Now we are going to use yosys which is the synthesizer used to convert RTL to ne
        /                                 -------------
      /                                  |Write_verilog|
  --------                                -------------
-|        |                                /
-| Design |------                        /  
+|        |                                 /
+| Design |------                         /  
 |        |      |      -------        -------
  --------       |     |       |      |       |
                 |---->| Yosys |----->|netlist|
@@ -316,8 +316,8 @@ Now we are going to use yosys which is the synthesizer used to convert RTL to ne
 |  .lib  |------
 |        |
  --------
-   \  
-     \
+    \  
+      \
   ------------
  |Read_verilog|
   ------------
