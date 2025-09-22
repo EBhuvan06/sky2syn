@@ -337,6 +337,21 @@ The out put of the Iverilog basic flow which has Design code otput(RTL simulatio
 ```
 So the set of primary inputs or outputs will remain same between the RTL design and synthesized netlist which means the same test bench can be used for both the Dsign and Netlist codes. 
 
+## Logic synthesis
+RTL Design:
+Behavioral representation of the required specification
+
+module sample_code ( 
+input clk,rst, output result, done);
+
+always @ (posedge clk, posedge rst) 
+if(rst)
+------
+else
+------
+endmodule
+----------------------------------
+
 
 
 
