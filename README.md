@@ -341,17 +341,45 @@ So the set of primary inputs or outputs will remain same between the RTL design 
 RTL Design:
 Behavioral representation of the required specification
 ```
-module sample_code ( 
-input clk,rst, output result, done);
-always @ (posedge clk, posedge rst) 
-if(rst)
-------
-else
-------
-endmodule
+module sample_code (                                         --------- 
+input clk,rst, output result, done);                        |         |
+always @ (posedge clk, posedge rst)                  ------>| D       |
+if(rst)                                                     |         |------->Q
+------                                               ------>|> clk    |
+else                                                        |         |
+------                                               ------>|  Reset  |               
+endmodule                                                    ---------    
 ----------------------------------
+       RTL Code                                          Digital Logic Circuit                         
+```
+Basically we dont want RTL code we wnat Logical circuit we map these two in the form of Synthesis. 
+```
+In synthesis the RTL code is translated into Gate level.                                    RTL    Frount End lib
+The design is converted into gates and the connections are made between gates.               |___________| 
+This is given a output file which is called netlist file.                                          |
+                                                                                               synthesis
+                                                                                                   | 
+                                                                                                NETLIST
+```
+## What is .lib
+```
+.lib
+This Collection of logical modules.
+Includes basic logic gates like And, Or, Not, etc...
+This has Different flavors of same gate
+  2 input And gate which has
+    Slow version
+    Medium version
+    Fast version
+  3 input And gate also
+    Slow version
+    Medium version
+    Fast version
+4 input And gate
+........so on
 ```
 
+      
 
 
 
