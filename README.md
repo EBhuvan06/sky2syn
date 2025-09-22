@@ -319,14 +319,23 @@ Now we are going to use yosys which is the synthesizer used to convert RTL to ne
     \  
       \
   ------------
- |Read_verilog|
+ |Read_liberty|
   ------------
 ```
 
+Read_verilog command to read the design and read_liberty command to read .lib file and write_verilog to write the netlist file. Once we execute the comand write_verilog we get the netlist output. Both netlist and design are same but Netlist is repreasentation of Design in the form cells present in the .lib.
 
+## Verify the synthesis
 
-
-
+The out put of the Iverilog basic flow which has Design code otput(RTL simulation) should be same as the netlist code output(synthesized output).
+```
+   NETLIST-------
+                 |
+                 |----->Iverilog Simulator---->.vcd file----->gtkwave---->Output Wave form
+                 |                              
+   Test Bench----
+```
+So the set of primary inputs or outputs will remain same between the RTL design and synthesized netlist which means the same test bench can be used for both the Dsign and Netlist codes. 
 
 
 
