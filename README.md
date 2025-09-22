@@ -272,7 +272,7 @@ GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
 ![Expected 1](Week_1/Expected_output_1.png)
 
 
-![Expected 2](Week_1/Expexted _output_2.png)
+![Expected 2](Week_1/Expected _output_2.png)
 
 
 
