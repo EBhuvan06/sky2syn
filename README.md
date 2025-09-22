@@ -340,10 +340,9 @@ So the set of primary inputs or outputs will remain same between the RTL design 
 ## Logic synthesis
 RTL Design:
 Behavioral representation of the required specification
-
+```
 module sample_code ( 
 input clk,rst, output result, done);
-
 always @ (posedge clk, posedge rst) 
 if(rst)
 ------
@@ -351,7 +350,7 @@ else
 ------
 endmodule
 ----------------------------------
-
+```
 
 
 
