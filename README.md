@@ -501,6 +501,43 @@ write_verilog -noattr good_mux_netlist.v
 # eliminate un wanted things
 !gvim good_mux_netlist.v
 ```
+```
+yosys> write_verilog good_mux_netlist.v 
+
+7. Executing Verilog backend.
+
+7.1. Executing BMUXMAP pass.
+
+7.2. Executing DEMUXMAP pass.
+Dumping module `\good_mux'.
+
+yosys> !gvim good_mux_netlist.v 
+
+8. Shell command: gvim good_mux_netlist.v
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+
+yosys> QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+
+
+yosys> write_verilog -noattr good_mux_netlist.v 
+
+9. Executing Verilog backend.
+
+9.1. Executing BMUXMAP pass.
+
+9.2. Executing DEMUXMAP pass.
+Dumping module `\good_mux'.
+
+yosys> !gvim good_mux_netlist.v 
+
+10. Shell command: gvim good_mux_netlist.v
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+
+yosys> QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+
+
+yosys> exit
+```
 
 ![With_comments](Week_1/External_comments.png)
 ![Without_comments](Week_1/No_comments.png)
