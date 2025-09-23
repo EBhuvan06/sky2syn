@@ -293,7 +293,7 @@ This gives the verilog design code and testbench code
 </details>
 
 <details>
-<summary>How to yosys</summary>
+<summary>What is yosys</summary>
 
 ## yosys
 Now we are going to use yosys which is the synthesizer used to convert RTL to netlist
@@ -378,9 +378,19 @@ This has Different flavors of same gate
 4 input And gate
 ........so on
 ```
+## Why use of different versions or flavours of gates
 
       
 
+```
+         --------- 
+        |         |
+ ------>| D       |
+        |         |------->Q
+ ------>|> clk    |
+        |         |
+ ------>|  Reset  |               
+         ---------    
 
 
 
