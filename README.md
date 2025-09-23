@@ -379,19 +379,23 @@ This has Different flavors of same gate
 ........so on
 ```
 ## Why use of different versions or flavours of gates
+Combinational delay in logic path determines the maximum speed of operation of digital logic circuit
+TCLK > TCQ A + TCOMBI + TSETUP_B
 
+So we need cells that work fast to make TCOMBI Small
+Are faster cells sufficient ?
       
 
 ```
-         --------- 
-        |         |
- ------>| D       |
-        |         |------->Q
- ------>|> clk    |
-        |         |
- ------>|  Reset  |               
-         ---------    
-
+         ---------                    --------
+        |         |                  |         |
+        |         |----> combib ---->|         |      ___     ___     ___     ___
+        |  D-FF A |                  |  D-FF B |    _|   |___|   |___|   |___|   |___ 
+        |         |                  |         |    <--Tclk-->
+        |         |                  |         |
+ ------>|> clk    |               -->|> clk    |
+    |    ---------               |    ---------
+    |____________________________|
 
 
 
