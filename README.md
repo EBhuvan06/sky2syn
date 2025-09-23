@@ -502,7 +502,8 @@ write_verilog -noattr good_mux_netlist.v
 !gvim good_mux_netlist.v
 ```
 
-
+![With_comments](Week_1/External_comments.png)
+![Without_comments](Week_1/No_comments.png)
 
 
 
