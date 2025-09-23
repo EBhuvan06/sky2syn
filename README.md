@@ -380,24 +380,21 @@ This has Different flavors of same gate
 ```
 ## Why use of different versions or flavours of gates
 Combinational delay in logic path determines the maximum speed of operation of digital logic circuit
-TCLK > TCQ A + TCOMBI + TSETUP_B
-
-So we need cells that work fast to make TCOMBI Small
-Are faster cells sufficient ?
-      
-
 ```
          ---------                    --------
         |         |                  |         |
         |         |----> combib ---->|         |      ___     ___     ___     ___
         |  D-FF A |                  |  D-FF B |    _|   |___|   |___|   |___|   |___ 
         |         |                  |         |    <--Tclk-->
-        |         |                  |         |
- ------>|> clk    |               -->|> clk    |
-    |    ---------               |    ---------
+        |         |                  |         |             propogation delay of comb  
+ ------>|> clk    |               -->|> clk    |     TCLK > TCQ A + TCOMBI + TSETUP_B
+    |    ---------               |    ---------        propogation delay of flop A                                    
     |____________________________|
 
+```
+The time taken for the clock to go from A to B is 1 clk cycle. We can't give the clock at same time for both FF because there might be chances of loss of data so we have to add a small delay which is called SETUP delay ot FF B by combining all of this the delay should be minimum for higher frequency  fclk_max = 1/clk_min. so for better performance dilay should be as less as possible. So we need cells that work fast to make TCOMBI Small. This where different types of versions of gates comes in to implementation.
 
+## Need of 
 
 
 
