@@ -490,7 +490,17 @@ show
 ![10](Week_1/10.png)
 ![Graphical](Week_1/graphical_interface.png)
 
+## Check netlist
 
+To check net list run below commands
+```
+write_verilog good_mux_netlist.v 
+!gvim good_mux_netlist.v
+# This give all the text which is not use full so run
+write_verilog -noattr good_mux_netlist.v
+# eliminate un wanted things
+!gvim good_mux_netlist.v
+```
 
 
 
