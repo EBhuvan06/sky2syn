@@ -542,7 +542,10 @@ yosys> exit
 ![With_comments](Week_1/External_comments.png)
 ![Without_comments](Week_1/No_comments.png)
 
-
+</details>
+</details>
+<details>
+<summary>Day_2</summary>
 
 
 
