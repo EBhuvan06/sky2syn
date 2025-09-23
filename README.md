@@ -394,7 +394,78 @@ Combinational delay in logic path determines the maximum speed of operation of d
 ```
 The time taken for the clock to go from A to B is 1 clk cycle. We can't give the clock at same time for both FF because there might be chances of loss of data so we have to add a small delay which is called SETUP delay ot FF B by combining all of this the delay should be minimum for higher frequency  fclk_max = 1/clk_min. so for better performance dilay should be as less as possible. So we need cells that work fast to make TCOMBI Small. This where different types of versions of gates comes in to implementation.
 
-## Need of 
+## Need of slow cells
+
+```
+         ---------                    --------
+        |         |                  |         |
+        |         |----> combib ---->|         |      ___     ___     ___     ___
+        |  D-FF A |                  |  D-FF B |    _|   |___|   |___|   |___|   |___ 
+        |         |                  |         |       1       2       3       4  
+        |         |                  |         |      THOLD_B < TCQ_A + TCOMBI           
+ ------>|> clk    |               -->|> clk    |     
+    |    ---------               |    ---------                                          
+    |____________________________|
+```
+When A FF is launched at 1 then B should not capture the launched signal at 1 the b should be captured at 2 as there is possibility of loss of data. The combination of the delay of FF A and Combi should be greater than the Hold of B which helps in the condition which we disscused before for this the slow cells comes into image which helps to provide dely required. Simply to ensure that there are no hold voilations at B FF we cells that work slow. Hence we need cells that work fast to meet the required performance and cells that work slow to meet HOLD. This collection of fast and slow cells is present in .lib 
+
+## Fast vs Slow
+
+Load in Digital Logic circuit is Capacitance
+```
+Gate A -----> Gate B
+```
+IF the capacitance between the gates is large than it take time to charge and progation delay at B gate increases and if capacitor is small the cahrge time will be less so teh propogation delay is less simply Faster the charging / discharging of capacitance Lesser the cell delay
+```
+To charge / discharge the capacitance fast, we need transistors capable of sourcing more current means wide transistors
+Wider transistors -> Low Delay -> More Area and Power as well !!
+Narrow transistors -> More Delay -> Less Area and Power
+Faster cells donot come free, they come at penalty of area and power
+```
+## selection of cells
+```
+Need to guide the Synthesizer to select the flavour of cells that is optimum for the implementation of logic circuit
+More use of faster cells --> Bad circuit interms of Power and Area and Hold time violations 
+More use of slower cells --> Sluggish circuit, may not meet the performance need
+The guidance offered to the Synthesizer --> "Constraints"
+```
+## synthesis Illustration
+```
+  ------------------------------------
+ | module (A, B,sel, clock, reset, Q) |                   ----------------------------------   
+ | input A, B,sel, clock, reset;      |----------------->|                                  |
+ | output Q;                          |                  |                                  |
+  ------------------------------------                   |    |\                            |
+  wire int;                                           B  |    |  \                          |
+  -------------------------                        ----->|--->|I0  \                        |
+ | assign int = sel ? A:B; |-----------------------------|--->|     |                       | 
+  -------------------------                              |    |    Y|-----                  |
+  ------------------------------------------          A  |    |     |     |     ------      |
+ | always @(posedge clock or posedge reset) |      ----->|--->|I1  /      |    |      |     | 
+ |  begin                                   |            |    |  /         --->|D     |     |
+ |   if (reset)                             |            |    |/  |        --->|>clk q|---->|----->Q
+ |   begin                                  |       Sel  |        |       |    |      |     |
+ |      Q <= 1'b0;                          |      ----->|--------        |  ->|res   |     |
+ |   end                                    |            |                | |   ---|--      |
+ |   else if (clk)                          |      ----->|----------------  |      |        |
+ |   begin                                  |      clock |                  |      |        |
+ |      Q <= int;                           |      reset |                  |      |        |
+ |   end                                    |      ----->|------------------       |        |
+ |  end                                     |------------|-------------------------         |
+  ------------------------------------------              ----------------------------------
+endmodule
+```
+Module map to the top level. Assign block is used for making mux in the main block where output of mux is connected to the D FF. Finally the assign block is used for the D FF and Q output is connected to the main block. The circuit on the right is created from RTL using the gates in the .lib and give out as Netlist.
+
+
+
+
+
+
+
+
+
+
 
 
 
