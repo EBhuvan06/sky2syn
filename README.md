@@ -457,8 +457,27 @@ endmodule
 ```
 Module map to the top level. Assign block is used for making mux in the main block where output of mux is connected to the D FF. Finally the assign block is used for the D FF and Q output is connected to the main block. The circuit on the right is created from RTL using the gates in the .lib and give out as Netlist.
 
+</details>
 
+<details>
+<summary>Introduction to synthesiser</summary>
 
+## yosys
+To convert RTL to Netlist follow the commands.
+```
+$ sudo -i
+# change directory where the yosys has been installed
+# yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+# to read the library
+read_verilog module_name.v
+# there should be no error
+synth -top module_name
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+# this covert rtl file to gate level net list and .lib is used to specify the what type of gate to be used
+show
+#this show graphical version of netlist
+```
 
 
 
