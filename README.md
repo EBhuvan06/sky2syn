@@ -478,6 +478,20 @@ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
 #this show graphical version of netlist
 ```
+![1](Week_1/1.png)
+![2](Week_1/2.png)
+![3](Week_1/3.png)
+![4](Week_1/4.png)
+![5](Week_1/5.png)
+![6](Week_1/6.png)
+![7](Week_1/7.png)
+![8](Week_1/8.png)
+![9](Week_1/9.png)
+![10](Week_1/10.png)
+![Graphical](Week_1/graphical_interface.png)
+
+
+
 
 
 
