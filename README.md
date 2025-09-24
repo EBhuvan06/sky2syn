@@ -553,7 +553,7 @@ P(process) V(voltage) T(temperature) plays a main role for a design to work. \
 Process     -> variation due to fabrication \
 voltage     -> variation due to voltage \
 Temperature -> variation due to temperature \
-Variation in PVT determine how the silicon is gona work like it is gona work faster or slower so we can not make a device every time with same specifications there will be minimal changes in the circuit so this small variations determine how the circuit is going to work. \
+Variation in PVT determine how the silicon is gona work like it is gona work faster or slower so we can not make a device every time with same specifications there will be minimal changes in the circuit so this small variations determine how the circuit is going to work. 
 ```
 library ("sky130_fd_sc_hd__tt_025C_1v80") {
     define(def_sim_opt,library,string);
@@ -600,17 +600,17 @@ library ("sky130_fd_sc_hd__tt_025C_1v80") {
 IN this sky130_fd_sc_hd__tt_025C_1v80 \
 tt stand for typical process \
 025C stand for 25c temperature \
-1v80 indicates 1.8v voltage. \
+1v80 indicates 1.8v voltage. 
 
 technology("cmos"); \
-This tells what kind of technology we are going to use. In this we are using CMOS technology.\
+This tells what kind of technology we are going to use. In this we are using CMOS technology.
 
-    time_unit : "1ns"; -------------------------> units of time in nano sec \
-    voltage_unit : "1V";------------------------> units of voltage in volts \
-    leakage_power_unit : "1nW";-----------------> units of power in nano whatt \
-    current_unit : "1mA";-----------------------> units of current in milli amps\
-    pulling_resistance_unit : "1kohm";----------> units of resistance in kilo ohm\
-    capacitive_load_unit(1.0000000000, "pf");---> units of capacitance in peco farade \
+    time_unit : "1ns"; -------------------------> units of time in nano sec 
+    voltage_unit : "1V";------------------------> units of voltage in volts 
+    leakage_power_unit : "1nW";-----------------> units of power in nano whatt 
+    current_unit : "1mA";-----------------------> units of current in milli amps
+    pulling_resistance_unit : "1kohm";----------> units of resistance in kilo ohm
+    capacitive_load_unit(1.0000000000, "pf");---> units of capacitance in peco farade 
 
    operating_conditions ("tt_025C_1v80") { ---> Tells the oeration conditions \
         voltage : 1.8000000000;---------> Voltage 1.8 \
