@@ -547,10 +547,76 @@ yosys> exit
 <details>
 <summary>Day_2</summary>
 
+## What .lib contains
 
+P(process) V(voltage) T(temperature) plays a main role for a design to work. \
+Process     -> variation due to fabrication \
+voltage     -> variation due to voltage \
+Temperature -> variation due to temperature \
+Variation in PVT determine how the silicon is gona work like it is gona work faster or slower so we can not make a device every time with same specifications there will be minimal changes in the circuit so this small variations determine how the circuit is going to work. \
+```
+library ("sky130_fd_sc_hd__tt_025C_1v80") {
+    define(def_sim_opt,library,string);
+    define(default_arc_mode,library,string);
+    define(default_constraint_arc_mode,library,string);
+    define(driver_model,library,string);
+    define(leakage_sim_opt,library,string);
+    define(min_pulse_width_mode,library,string);
+    define(simulator,library,string);
+    define(switching_power_split_model,library,string);
+    define(sim_opt,timing,string);
+    define(violation_delay_degrade_pct,timing,string);
+    technology("cmos");
+    delay_model : "table_lookup";
+    bus_naming_style : "%s[%d]";
+    time_unit : "1ns";
+    voltage_unit : "1V";
+    leakage_power_unit : "1nW";
+    current_unit : "1mA";
+    pulling_resistance_unit : "1kohm";
+    capacitive_load_unit(1.0000000000, "pf");
+    revision : 1.0000000000;
+    default_cell_leakage_power : 0.0000000000;
+    default_fanout_load : 0.0000000000;
+    default_inout_pin_cap : 0.0000000000;
+    default_input_pin_cap : 0.0000000000;
+    default_max_transition : 1.5000000000;
+    default_output_pin_cap : 0.0000000000;
+    default_arc_mode : "worst_edges";
+    default_constraint_arc_mode : "worst";
+    default_leakage_power_density : 0.0000000000;
+    default_operating_conditions : "tt_025C_1v80";
+    operating_conditions ("tt_025C_1v80") {
+        voltage : 1.8000000000;
+        process : 1.0000000000;
+        temperature : 25.000000000;
+        tree_type : "balanced_tree";
+    }
+    power_lut_template ("power_inputs_1") {
+        variable_1 : "input_transition_time";
+        index_1("1, 2, 3, 4, 5, 6, 7");
+    }
+```
+IN this sky130_fd_sc_hd__tt_025C_1v80 \
+tt stand for typical process \
+025C stand for 25c temperature \
+1v80 indicates 1.8v voltage. \
 
+technology("cmos"); \
+This tells what kind of technology we are going to use. In this we are using CMOS technology.\
 
+    time_unit : "1ns"; -------------------------> units of time in nano sec \
+    voltage_unit : "1V";------------------------> units of voltage in volts \
+    leakage_power_unit : "1nW";-----------------> units of power in nano whatt \
+    current_unit : "1mA";-----------------------> units of current in milli amps\
+    pulling_resistance_unit : "1kohm";----------> units of resistance in kilo ohm\
+    capacitive_load_unit(1.0000000000, "pf");---> units of capacitance in peco farade \
 
-
+   operating_conditions ("tt_025C_1v80") { ---> Tells the oeration conditions \
+        voltage : 1.8000000000;---------> Voltage 1.8 \
+        process : 1.0000000000;---------> process tt \
+        temperature : 25.000000000;-----> temp 25 \
+        tree_type : "balanced_tree"; \
+   }
 
 
